@@ -1,0 +1,92 @@
+/* popup.css */
+body {
+    font-family: Arial, sans-serif; /* Default font */
+    width: 250px; /* Adjusted for better layout */
+    height: 350px; /* Adjusted for better layout */
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    background-color: white; /* Default background color */
+}
+
+.button-group {
+    margin-bottom: 10px;
+}
+
+.button-group button,
+.button-group select {
+    margin: 5px;
+}
+
+.alignment-buttons,
+.line-height-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.alignment-buttons button,
+.line-height-buttons button {
+    margin: 0 5px;
+}
+
+.button-group span {
+    margin: 0 5px;
+}
+
+/* Light yellow background for specific elements */
+.light-yellow-bg {
+    background-color: lightyellow;
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+/* Grey background for specific elements */
+.grey-bg {
+    background-color: grey;
+    font-family: 'Dubai', sans-serif;
+    color: white; /* Adjust text color for better contrast */
+}
+
+/* Times New Roman font */
+.times-new-roman {
+    font-family: 'Times New Roman', serif;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333; /* Dark mode background color */
+    color: #fff; /* Text color in dark mode */
+}
+
+body.dark-mode .light-yellow-bg {
+    background-color: #444; /* Adjust light yellow background for dark mode */
+}
+
+/* Support us on Ko-fi link styling */
+#donation-link a {
+    font-size: 1.2em;
+    color: blue;
+    text-decoration: none;
+}
+
+#donation-link a:hover {
+    text-decoration: underline;
+}
+
+/* Move font family option down a bit */
+#font-family-setting {
+    margin-top: 20px; /* Adjust the margin to move it down */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+}

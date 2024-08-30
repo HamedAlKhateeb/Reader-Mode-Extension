@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Reader Mode Extension",
+  "version": "1.0",
+  "description": "Transform any webpage into reader mode with customizable options",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "scripting",
+    "cookies"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/dark-mode.png",
+        "icons/decrease-font.png",
+        "icons/increase-font.png",
+        "icons/rtl-icon.png",
+        "icons/align-left.png",
+        "icons/align-right.png",
+        "icons/format.png",
+        "icons/zoom-in.png",
+        "icons/zoom-out.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

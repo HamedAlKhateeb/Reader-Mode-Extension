@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reader Mode Extension</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h2 id="status">Reader Mode: OFF</h2>
+    <div class="button-group">
+        <button id="toggleReaderMode">Toggle Reader Mode</button>
+    </div>
+    <div class="button-group">
+        <button id="zoomIn"><img src="icons/zoom-in.png" alt="Zoom In"></button>
+        <button id="zoomOut"><img src="icons/zoom-out.png" alt="Zoom Out"></button>
+    </div>
+    <div class="button-group">
+        <button id="increaseFont"><img src="icons/increase-font.png" alt="Increase Font"></button>
+        <button id="decreaseFont"><img src="icons/decrease-font.png" alt="Decrease Font"></button>
+    </div>
+    <div class="button-group">
+        <button id="increaseLineHeight">↑</button>
+        <span>Text Height</span>
+        <button id="decreaseLineHeight">↓</button>
+    </div>
+    <div class="button-group">
+        <button id="toggleRTL">Toggle RTL</button>
+    </div>
+    <div class="button-group">
+        <label for="backgroundColor">Background Color:</label>
+        <select id="backgroundColor" onchange="changeBackgroundColor()">
+            <option value="white">White</option>
+            <option value="lightyellow">Light Yellow</option>
+            <option value="grey">Grey</option>
+        </select>
+    </div>
+    <div class="button-group">
+        <label for="fontFamily">Font Family:</label>
+        <select id="fontFamily" onchange="changeFontFamily()">
+            <option value="Arial">Arial</option>
+            <option value="Noto Sans Arabic">Noto Sans Arabic</option>
+            <option value="Dubai">Dubai</option>
+            <option value="Times New Roman">Times New Roman</option>
+        </select>
+    </div>
+    <div class="alignment-buttons">
+        <button id="alignLeft"><img src="icons/align-left.png" alt="Align Left"></button>
+        <button id="alignCenter"><img src="icons/format.png" alt="Align Center"></button>
+        <button id="alignRight"><img src="icons/align-right.png" alt="Align Right"></button>
+    </div>
+    <div class="button-group">
+        <button id="decreaseWidth">← width</button>
+        <button id="increaseWidth">width →</button>
+    </div>
+    <div class="button-group">
+        <button id="toggleDarkMode"><img src="icons/dark-mode.png" alt="Toggle Dark Mode"></button>
+    </div>
+    <div class="button-group">
+        <button id="toggleSaveSettings">Save Settings: OFF</button>
+    </div>
+
+    <!-- Donation link for dark mode -->
+    <div id="donation-link" class="dark-mode-only">
+        <a href="https://ko-fi.com/hamed_alkhateeb" target="_blank" style="font-size: 1.2em; color: blue;">Support us on Ko-fi</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
